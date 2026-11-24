@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101116">
+  <meta name="description" content="Personal Mechanical Engineering learning and AI workspace.">
+  <title>MY MechMaster AI</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">⚙</div><div><strong>MY MechMaster AI</strong><small>Mechanical Engineering Workspace</small></div></div>
+  <span id="connection" class="status">● Checking…</span>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">YOUR PERSONAL ENGINEERING UNIVERSITY</p>
+    <h1>Learn. Design.<br><span>Build the future.</span></h1>
+    <p>Mechanical subjects, CAD practice, engineering tools and AI assistants in one place.</p>
+    <div class="hero-actions">
+      <button class="primary" data-go="subjects">Explore subjects</button>
+      <button class="secondary" data-go="ai">Open AI Lab</button>
+    </div>
+  </section>
+
+  <section class="quick-grid" aria-label="Quick features">
+    <button class="quick-card" data-go="subjects"><b>📚</b><strong>Subjects</strong><small>Learn core topics</small></button>
+    <button class="quick-card" data-go="cad"><b>📐</b><strong>CAD Centre</strong><small>Solid Edge practice</small></button>
+    <button class="quick-card" data-go="tools"><b>🛠️</b><strong>Tools Library</strong><small>Workshop instruments</small></button>
+    <button class="quick-card" data-go="calculator"><b>🧮</b><strong>Calculators</strong><small>Engineering formulas</small></button>
+    <button class="quick-card" data-go="videos"><b>▶️</b><strong>Video Academy</strong><small>Find lessons online</small></button>
+    <button class="quick-card" data-go="ai"><b>🤖</b><strong>AI Laboratory</strong><small>Ask engineering AI</small></button>
+  </section>
+
+  <section class="panel" id="subjects">
+    <div class="section-head"><div><p class="eyebrow">LEARNING LIBRARY</p><h2>Mechanical subjects</h2></div><span class="tag">Starter library</span></div>
+    <input id="subjectSearch" class="search" placeholder="Search subjects or topics…" aria-label="Search subjects">
+    <div id="subjectList" class="subject-list"></div>
+  </section>
+
+  <section class="panel" id="cad">
+    <div class="section-head"><div><p class="eyebrow">DESIGN WORKSPACE</p><h2>CAD learning centre</h2></div></div>
+    <p class="muted">Learn on this phone; practise actual Solid Edge V18 modelling on a compatible Windows computer. This app does not run Solid Edge itself.</p>
+    <div class="tiles">
+      <article class="tile"><b>01 · Sketching</b><p>Lines, circles, constraints, dimensions and profiles.</p></article>
+      <article class="tile"><b>02 · Part modelling</b><p>Extrude, revolve, cut, hole and pattern concepts.</p></article>
+      <article class="tile"><b>03 · Assembly</b><p>Components, relationships and assembly planning.</p></article>
+      <article class="tile"><b>04 · Engineering drawing</b><p>Orthographic, isometric, section views and dimensions.</p></article>
+    </div>
+    <button class="secondary wide" data-search="Solid Edge V18 beginner tutorial sketch part modeling assembly">Find Solid Edge lessons</button>
+  </section>
+
+  <section class="panel" id="tools">
+    <div class="section-head"><div><p class="eyebrow">WORKSHOP REFERENCE</p><h2>Engineering tools</h2></div></div>
+    <div class="tool-list">
+      <details><summary>Vernier caliper</summary><p>Measures external, internal and depth dimensions. Learn its parts, least count, reading method and care.</p></details>
+      <details><summary>Micrometer screw gauge</summary><p>Measures small dimensions using a calibrated screw mechanism. Study pitch, least count and zero error.</p></details>
+      <details><summary>Dial indicator</summary><p>Indicates small displacement, runout and alignment variation.</p></details>
+      <details><summary>Lathe machine</summary><p>Rotates a workpiece while a cutting tool removes material. Study turning, facing and threading concepts.</p></details>
+      <details><summary>Milling machine</summary><p>Uses a rotating multi-point cutter for machining flat and shaped surfaces.</p></details>
+      <details><summary>Drilling machine</summary><p>Produces holes using a rotating drill. Learn drilling operations and safe workshop practice.</p></details>
+    </div>
+  </section>
+
+  <section class="panel" id="calculator">
+    <div class="section-head"><div><p class="eyebrow">QUICK CALCULATIONS</p><h2>Stress calculator</h2></div></div>
+    <p class="muted">Normal stress = Force ÷ Area. Enter force in newtons and area in mm². Result is N/mm² (MPa).</p>
+    <div class="calc-grid">
+      <label>Force (N)<input id="force" type="number" min="0" step="any" placeholder="e.g. 1000"></label>
+      <label>Area (mm²)<input id="area" type="number" min="0" step="any" placeholder="e.g. 50"></label>
+    </div>
+    <button class="primary wide" id="calculate">Calculate stress</button>
+    <p id="calcResult" class="result" aria-live="polite">Your result will appear here.</p>
+  </section>
+
+  <section class="panel" id="videos">
+    <div class="section-head"><div><p class="eyebrow">VIDEO LEARNING</p><h2>Find engineering lessons</h2></div></div>
+    <p class="muted">Search YouTube for lessons. Check the instructor, syllabus match and accuracy before relying on a video.</p>
+    <div class="video-buttons">
+      <button class="secondary" data-search="Engineering thermodynamics lessons for mechanical engineering">Thermodynamics</button>
+      <button class="secondary" data-search="Material science and metallurgy mechanical engineering lessons">Materials</button>
+      <button class="secondary" data-search="Solid Edge V18 CAD tutorial beginner">Solid Edge V18</button>
+      <button class="secondary" data-search="Fluid mechanics mechanical engineering lessons">Fluid mechanics</button>
+      <button class="secondary" data-search="Manufacturing technology mechanical engineering workshop lessons">Manufacturing</button>
+    </div>
+  </section>
+
+  <section class="panel ai-panel" id="ai">
+    <div class="section-head"><div><p class="eyebrow">MULTI-AI WORKSPACE</p><h2>Mechanical Engineering AI Lab</h2></div><span class="tag gold">AI links</span></div>
+    <p class="muted">Choose an assistant. Copy the engineering-only instruction and paste it into the AI chat. Each provider has its own account, terms and possible usage limits.</p>
+    <label>Your engineering question or task<textarea id="aiQuestion" rows="4" placeholder="Example: Explain the second law of thermodynamics with a simple mechanical engineering example."></textarea></label>
+    <button class="primary wide" id="copyPrompt">Copy engineering instruction + question</button>
+    <div class="ai-grid">
+      <a class="ai-card" href="https://chatgpt.com/" target="_blank" rel="noopener"><span>✳</span><b>ChatGPT</b><small>Open assistant ↗</small></a>
+      <a class="ai-card" href="https://gemini.google.com/" target="_blank" rel="noopener"><span>✦</span><b>Google Gemini</b><small>Open assistant ↗</small></a>
+      <a class="ai-card" href="https://claude.ai/" target="_blank" rel="noopener"><span>◈</span><b>Claude</b><small>Open assistant ↗</small></a>
+    </div>
+    <p id="copyStatus" class="muted" aria-live="polite"></p>
+    <div class="notice"><b>AI safety and accuracy:</b> AI answers can be wrong. Verify calculations, standards, dimensions and design decisions using textbooks, instructors and authoritative references. Do not use AI output alone for real-world safety-critical designs.</div>
+  </section>
+
+  <section class="panel" id="saved">
+    <div class="section-head"><div><p class="eyebrow">PERSONAL WORKSPACE</p><h2>My saved notes</h2></div></div>
+    <label>Write a note<textarea id="noteInput" rows="3" placeholder="Save a formula, reminder or study note…"></textarea></label>
+    <button class="primary" id="saveNote">Save note on this device</button>
+    <div id="notesList" class="notes-list"></div>
+    <p class="muted tiny">Notes are stored locally in this browser on this device. They are not automatically synced or backed up.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Coming in later phases</h2>
+    <div class="coming"><span>📄</span> PDF notes and document question-answering</div>
+    <div class="coming"><span>🧠</span> Chapter-wise MCQs and progress tracking</div>
+    <div class="coming"><span>📊</span> PPT, report and project-content builder</div>
+    <div class="coming"><span>☁️</span> Secure direct AI API integration</div>
+  </section>
+</main>
+<nav class="bottom-nav">
+  <button data-go="top">⌂<small>Home</small></button><button data-go="subjects">▤<small>Subjects</small></button><button data-go="cad">▱<small>CAD</small></button><button data-go="ai">✧<small>AI Lab</small></button><button data-go="saved">☆<small>Saved</small></button>
+</nav>
+<div id="toast" role="status" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

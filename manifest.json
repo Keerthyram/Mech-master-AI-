@@ -1,0 +1,18 @@
+{
+  "name": "MY MechMaster AI",
+  "short_name": "MechMaster AI",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101116",
+  "theme_color": "#101116",
+  "description": "Personal Mechanical Engineering learning workspace",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
